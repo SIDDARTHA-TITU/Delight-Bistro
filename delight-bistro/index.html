@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delight Bistro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <h1 class="nav-title">Delight Bistro</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reservation">Reserve</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="home" class="hero">
+      <h1 class="hero-title">Welcome to Delight Bistro!</h1>
+      <p class="hero-text">Indulge in a vibrant culinary experience!</p>
+    </section>
+    <section id="menu" class="menu">
+      <h2 class="section-title">Our Colorful Menu</h2>
+      <!-- Categories populated by JavaScript -->
+    </section>
+    <section id="reservation" class="reservation-section">
+      <h2 class="section-title">Reserve Your Spot</h2>
+      <form id="reservation-form" class="reservation-form">
+        <div>
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" class="form-input" required>
+        </div>
+        <div>
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-input" required>
+        </div>
+        <div>
+          <label for="people" class="form-label">Number of People</label>
+          <input type="number" id="people" class="form-input" min="1" value="1" required>
+        </div>
+        <div>
+          <label for="date" class="form-label">Date</label>
+          <input type="date" id="date" class="form-input" required>
+        </div>
+        <div>
+          <label for="time" class="form-label">Time</label>
+          <input type="time" id="time" class="form-input" required>
+        </div>
+        <div class="form-checkbox-container">
+          <input type="checkbox" id="complimentary-drink" class="form-checkbox">
+          <label for="complimentary-drink" class="form-label">Complimentary Drink</label>
+        </div>
+        <button type="submit" class="form-button">Reserve Now!</button>
+        <p id="form-status" class="form-status"></p>
+      </form>
+    </section>
+  </main>
+  </main>
+<footer class="footer">
+  <p>© 2025 Delight Bistro. All rights reserved.</p>
+  <p>Contact: info@delightbistro.com | +1-234-567-890</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

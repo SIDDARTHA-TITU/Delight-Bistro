@@ -1,0 +1,304 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff5e6; /* Light peach background */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background: linear-gradient(90deg, #FF6347, #FF8C00); /* Tomato to mango gradient */
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-title {
+  font-size: 30px;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: transform 0.3s;
+}
+
+.nav-links a:hover {
+  transform: scale(1.2);
+  background: linear-gradient(45deg, #DA70D6, #32CD32); /* Berry to lime */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 0;
+  background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0') no-repeat center/cover;
+  color: white;
+  position: relative;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 99, 71, 0.5); /* Tomato overlay */
+}
+
+.hero-title, .hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #FF4500; /* Orange */
+  text-align: center;
+  margin: 50px 0 20px;
+  animation: bounceIn 1s ease-in-out;
+}
+
+.menu-category {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.menu-category.veg::before { background: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd') no-repeat center/cover; }
+.menu-category.nonVeg::before { background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center/cover; }
+.menu-category.breads::before { background: url('https://images.unsplash.com/photo-1615716175182-8a5935a15989') no-repeat center/cover; }
+.menu-category.healthyBowls::before { background: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd') no-repeat center/cover; }
+.menu-category.softDrinks::before { background: url('https://images.unsplash.com/photo-1622483767028-3f66f32b44ed') no-repeat center/cover; }
+.menu-category.beverages::before { background: url('https://images.unsplash.com/photo-1494314675222-991f0b6c995c') no-repeat center/cover; }
+.menu-category.wine::before { background: url('https://images.unsplash.com/photo-1597905296937-7b7ab8747c2a') no-repeat center/cover; }
+.menu-category.mainCourse::before { background: url('https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2') no-repeat center/cover; }
+.menu-category.desserts::before { background: url('https://images.unsplash.com/photo-1571877227200-a0d98ea607e9') no-repeat center/cover; }
+.menu-category.snacks::before { background: url('https://images.unsplash.com/photo-1518013431117-eb146820e53b') no-repeat center/cover; }
+
+.menu-category-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #DA70D6; /* Berry purple */
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #FFD700, #FF6347); /* Mustard to tomato */
+}
+
+.menu-item-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menu-item-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.menu-item-type {
+  font-size: 12px;
+  color: #32CD32; /* Lime green */
+  margin-left: 5px;
+}
+
+.menu-item-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FF4500; /* Orange */
+  margin-left: auto;
+}
+
+.reservation-section {
+  padding: 60px 20px;
+  background: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5') no-repeat center/cover;
+  border-radius: 10px;
+  margin: 40px 0;
+  position: relative;
+}
+
+.reservation-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(218, 112, 214, 0.3); /* Berry overlay */
+  border-radius: 10px;
+}
+
+.reservation-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-input {
+  padding: 10px;
+  border: 2px solid #FFD700; /* Mustard yellow */
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  border-color: #32CD32; /* Lime green */
+  outline: none;
+}
+
+.form-checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.form-checkbox {
+  margin-right: 10px;
+}
+
+.form-button {
+  background: linear-gradient(90deg, #FF6347, #FF8C00); /* Tomato to mango */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.form-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #DA70D6, #32CD32); /* Berry to lime */
+}
+
+.form-status {
+  text-align: center;
+  font-size: 16px;
+  color: #FF4500; /* Orange */
+  margin-top: 10px;
+}
+
+.footer {
+  background: linear-gradient(90deg, #DA70D6, #FFD700); /* Berry to mustard */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
